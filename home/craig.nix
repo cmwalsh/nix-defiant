@@ -33,13 +33,13 @@
         # Productivity
         obsidian
         thunderbird-128
-        protonmail-desktop
         google-chrome
 
         # Utility
         bitwarden
         ventoy
         vorta
+        ktailctl
 
         # Shell
         zsh
