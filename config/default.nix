@@ -70,6 +70,9 @@
     networkmanager.enable = true;
   };
 
+  # Enable ZSH
+  programs.zsh.enable = true;
+
   # Users
   users.users.craig = {
     isNormalUser = true;
