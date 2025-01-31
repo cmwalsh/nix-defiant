@@ -13,6 +13,27 @@
     ../nixos/virtualisation/libvirt.nix
   ];
 
+  # NixOS
+  nix = {
+    settings = {
+      experimental-features = ["nix-command" "flakes"];
+      warn-dirty = false;
+      auto-optimise-store = true;
+    };
+
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 5";
+    };
+  };
+
+  nixpkgs = {
+    config = {
+      allowUnfree = true;
+    };
+  };
+
   # Enable zram
   zramSwap = {
     enable = true;
@@ -49,9 +70,6 @@
     networkmanager.enable = true;
   };
 
-  # Enable ZSH
-  programs.zsh.enable = true;
-
   # Users
   users.users.craig = {
     isNormalUser = true;
@@ -64,6 +82,15 @@
     ];
   };
 
+  # Firmware updates
+  # https://nixos.wiki/wiki/Fwupd
+  services = {
+    fwupd.enable = true;
+    smartd.enable = true;
+  };
+
   # Welcome message
   programs.zsh.interactiveShellInit = "echo \"\" \n figurine -f \"3d.flf\" defiant";
+
+  system.stateVersion = "24.11";
 }

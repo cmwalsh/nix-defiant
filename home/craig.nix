@@ -47,7 +47,7 @@
         starship
 
         # Overrides
-        (callPackage ../pkgs/freeshow {})
+        # (callPackage ../pkgs/freeshow {})
       ])
       ++ (with pkgs-unstable; [
         # Dev
