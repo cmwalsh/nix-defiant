@@ -47,7 +47,7 @@
         starship
 
         # Overrides
-        # (callPackage ../pkgs/freeshow {})
+        (callPackage ../pkgs/freeshow {})
       ])
       ++ (with pkgs-unstable; [
         # Dev
@@ -121,7 +121,7 @@
       VISUAL = "micro";
       PNPM_HOME = "/home/craig/.config/pnpm/global";
     };
-    
+
     initExtra = ''
       # case insensitive path-completion
       autoload -U compinit && compinit
