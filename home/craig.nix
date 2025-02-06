@@ -46,6 +46,9 @@
         kitty
         starship
 
+        # Sysadmin
+        moonlight-qt
+
         # Overrides
         (callPackage ../pkgs/freeshow {})
       ])
