@@ -30,6 +30,10 @@
         mumble
         element-desktop
 
+        # Games
+        fsuae
+        fsuae-launcher
+
         # Productivity
         obsidian
         thunderbird-128
@@ -40,6 +44,8 @@
         ventoy
         vorta
         ktailctl
+        audacity
+        protonvpn-gui
 
         # Shell
         zsh
